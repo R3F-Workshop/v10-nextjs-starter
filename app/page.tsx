@@ -1,5 +1,5 @@
-import { SceneCanvas } from '@/components/SceneCanvas'
-import { Footer } from '@/components/overlay/Footer'
+import { SceneCanvas } from '@/app/components/SceneCanvas'
+import { Footer } from '@/app/components/overlay/Footer'
 
 export default function Home() {
   return (

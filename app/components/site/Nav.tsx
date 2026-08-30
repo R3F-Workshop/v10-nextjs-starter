@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation'
 
 /** Internal routes — App Router pages under app/ */
 const ROUTES = [
-  { label: 'scene', href: '/' },
   { label: 'about', href: '/about' },
   { label: 'notes', href: '/notes' },
 ] as const
@@ -26,9 +25,10 @@ export function Nav() {
   return (
     <header className="z-20 flex shrink-0 items-center justify-between border-b border-white/10 bg-black/30 px-6 py-3 backdrop-blur-md">
       <div className="flex items-baseline gap-3">
-        <h1 className="text-sm font-semibold tracking-tight text-zinc-50">
+        <Link href="/" className="text-sm font-semibold tracking-tight text-zinc-50 hover:underline focus:outline-none focus:ring-2 focus:ring-violet-400">
           R3F <span className="text-violet-400">v10</span>
-        </h1>
+        </Link>
+   
         <span className="rounded-full border border-violet-500/30 bg-violet-500/10 px-2 py-0.5 font-mono text-[10px] text-violet-300">
           next
         </span>

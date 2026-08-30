@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Nav } from '@/components/site/Nav'
+import { Nav } from '@/app/components/site/Nav'
 
 export const metadata: Metadata = {
   title: 'R3F v10 Next.js Starter',

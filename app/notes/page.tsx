@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
-import { Code, PageShell, Section } from '@/components/site/PageShell'
+import { Code, PageShell, Section } from '@/app/components/site/PageShell'
 
 export const metadata: Metadata = {
   title: 'Notes · R3F v10 Next.js Starter',

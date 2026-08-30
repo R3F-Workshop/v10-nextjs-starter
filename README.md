@@ -25,14 +25,14 @@ app/
 ├── page.tsx                   # server component → <SceneCanvas>
 ├── about/page.tsx             # DOM only
 ├── notes/page.tsx             # DOM only
-└── globals.css                # Tailwind v4 (@import 'tailwindcss')
-components/
-├── SceneCanvas.tsx            # 'use client' — dynamic({ ssr: false }) boundary
-├── Experience.tsx             # the <Canvas>, fog, Leva background control
-├── site/                      # Nav (usePathname active state), PageShell
-├── stage/                     # CameraRig, Lights, Floor
-├── content/                   # LogoCubes, Cube, Pyramid, Suzi
-└── overlay/                   # Footer, PmndrsMark (DOM, Tailwind)
+├── globals.css                # Tailwind v4 (@import 'tailwindcss')
+└── components/
+    ├── SceneCanvas.tsx        # 'use client' — dynamic({ ssr: false }) boundary
+    ├── Experience.tsx         # the <Canvas>, fog, Leva background control
+    ├── site/                  # Nav (usePathname active state), PageShell
+    ├── stage/                 # CameraRig, Lights, Floor
+    ├── content/               # LogoCubes, Cube, Pyramid, Suzi
+    └── overlay/               # Footer, PmndrsMark (DOM, Tailwind)
 public/models/                 # suzimatholder.glb, loaded by drei's useGLTF
 ```
 
@@ -62,7 +62,7 @@ Leva gets the same `ssr: false` treatment, and is mounted on the home route only
 
 ## The v10 headline: TSL uniforms with `useUniforms` + `useLocalNodes`
 
-[Cube.tsx](components/content/Cube.tsx) is the demo:
+[Cube.tsx](app/components/content/Cube.tsx) is the demo:
 
 ```
 useControls (Leva) ──► useUniforms('cubes' scope) ──► useLocalNodes ──► meshStandardNodeMaterial
@@ -78,5 +78,5 @@ See [/notes](app/notes/page.tsx) for the gotchas — including why the creator n
 
 - Give `/about` or `/notes` a small canvas of its own and watch two renderers coexist
 - Hoist the `<Canvas>` into `app/layout.tsx` with `tunnel-rat` so the scene persists across routes
-- Change the `PATTERN` grid in [LogoCubes.tsx](components/content/LogoCubes.tsx)
+- Change the `PATTERN` grid in [LogoCubes.tsx](app/components/content/LogoCubes.tsx)
 - Extend the cube node graph — try `positionNode` for a TSL vertex wobble
