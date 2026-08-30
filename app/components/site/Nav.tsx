@@ -23,7 +23,7 @@ export function Nav() {
   const pathname = usePathname()
 
   return (
-    <header className="z-20 flex shrink-0 items-center justify-between border-b border-white/10 bg-black/30 px-6 py-3 backdrop-blur-md">
+    <header className="sticky top-0 z-20 flex shrink-0 items-center justify-between border-b border-white/10 bg-black/30 px-6 py-3 backdrop-blur-md">
       <div className="flex items-baseline gap-3">
         <Link href="/" className="text-sm font-semibold tracking-tight text-zinc-50 hover:underline focus:outline-none focus:ring-2 focus:ring-violet-400">
           R3F <span className="text-violet-400">v10</span>
